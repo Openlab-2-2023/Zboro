@@ -11,7 +11,7 @@ menuIcon.onclick = () => {
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('Header nav a');
 
-    window.onscroll = () => 
+    window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 100;
@@ -29,3 +29,12 @@ menuIcon.onclick = () => {
     });
 
     // sticky header 
+    let header = document.querySelector('header')
+
+    header.classList.toggle('sticky', window.scrollY > 100);
+    
+    //remove toggle icon and navbar when click navbar links (scroll)
+
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+}
