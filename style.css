@@ -60,3 +60,26 @@ text-align: center;
 span {
     color: var(--main-color);
     }
+
+svg {
+    width: 5%;
+    margin-left: 50px;   
+}
+.SVG:hover {
+    animation: wiggle 0.2s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-2px);
+    }
+    50% {
+        transform: translateX(2px);
+    }
+    75% {
+        transform: translateX(-2px);
+    }
+}
